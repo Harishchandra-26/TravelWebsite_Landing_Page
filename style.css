@@ -1,0 +1,325 @@
+/* General Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Utility Classes */
+a {
+    text-decoration: none;
+}
+
+.cta,
+.cta:visited {
+    padding: 8px 15px;
+    color: white;
+    background-color: #ffd700;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.cta:hover,
+.cta:active {
+    color: #ffd700;
+    background: transparent;
+    border: 2px solid #ffd700;
+    box-shadow: 0px 0px 10px rgba(225, 225, 225, 0.45);
+}
+
+img{
+    cursor: pointer;
+    transition: all .5s;
+}
+
+img:hover{
+    transform:scale(1.1);
+}
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.logo {
+    font-size: 3vmin;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #ffd700;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+}
+
+.nav_link li {
+    margin: 0 30px;
+}
+
+.nav_link li a {
+    color: whitesmoke;
+    transition: all 0.3s;
+}
+
+.nav_link li a:hover {
+    color: #ffd700;
+}
+
+.menu_btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    display: none;
+    pointer-events: none;
+}
+
+/* Header Styling */
+header {
+    height: 100vh;
+    width: 100%;
+    background: url(bg_img.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.header_content {
+    color: white;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.header_content h2 {
+    text-transform: capitalize;
+    font-size: 4vmin;
+    color: rgb(28, 182, 156);
+}
+
+.header_content h1 {
+    font-size: 7vmin;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: #ffd700;
+    margin: 10px auto;
+}
+
+/* Upcoming Events Section */
+.events {
+    width: 90%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.events .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Space between items */
+    justify-content: center; /* Center align the content */
+}
+
+.col {
+    flex: 1 1 calc(50% - 20px); /* Two columns, adjust with gap */
+    max-width: 450px;
+    text-align: center; /* Center align text */
+}
+
+.up_events {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    color: #484872;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 15px auto;
+}
+
+p {
+    color: #7c7c77;
+    padding: 10px 20px;
+}
+
+
+/* UPCOMING TOURS */
+
+ /* General Styling for Tours Section */
+.tours {
+    width: 90%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.tours .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Add space between the columns */
+    align-items: center;
+    gap: 30px; /* Adjust spacing between items */
+}
+
+.content_col, .img_col {
+    flex: 1 1 35%; /* Each column takes up approximately 45% of the width */
+    max-width: 35%;
+    text-align: left;
+}
+
+.img_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Display images in 2 columns */
+    gap: 10px;
+}
+
+.img_gallery img {
+    width: 90%;
+    border-radius: 0px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media only screen and (max-width: 850px) {
+    .content_col, .img_col {
+        flex: 1 1 100%; /* Each column takes the full width */
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .img_gallery {
+        grid-template-columns: repeat(1, 1fr); /* Single column layout for images */
+    }
+}
+.content_col h1{
+     font-size: 7vmin;
+     text-transform: uppercase;
+     color: #484872;
+}
+.content_col.line{
+    margin-left: -1px;
+}
+.content_col p{
+    padding: 0;
+    margin: 30px auto;
+}
+.content_col.cta{
+    margin-left: -100px;
+}
+
+/* UPCOMING TOURS END*/
+
+/* FOOTER */
+
+footer{
+ width: 100%;
+ min-height: 100px;
+ padding: 20px 8px;
+ text-align: center;
+ background-color: #484872;
+}
+footer p{
+    color: whitesmoke;
+    margin-right: 20px auto;
+}
+
+
+/* Mobile Display */
+@media only screen and (max-width: 80px) {
+    .menu_btn {
+        display: block;
+        pointer-events: all;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .logo {
+        top: 30px;
+        left: 30px;
+    }
+
+    .nav_link {
+        height: 100vh;
+        width: 100%;
+        background: #6fa9b4;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        flex: 1 1 100%; /* Full width for mobile */
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* EXPLORE THE WORLD */
+
+.explore{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bg_img-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;align-items: center;
+}
+.explore_content{
+    width: 60%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.explore_content h1{
+    height: 7vmin;
+    text-transform: uppercase;
+}
+.explore_content.line{
+    margin-bottom: 50px;
+}
+.explore_content p{
+    color:#ffffffeb;
+}
+.explore_content.cta{
+      margin-top: 40px;
+}
+
+
+
+
+/* EXPLORE THE WORLD end*/
